@@ -12,6 +12,7 @@ people = {}
 # Maps movie_ids to a dictionary of: title, year, stars (a set of person_ids)
 movies = {}
 
+
 def load_data(directory):
     """
     Load data from CSV files into memory.
@@ -123,7 +124,6 @@ def shortest_path(source, target):
             person_id = neighbor[1]
             if person_id not in explored_set and not qf.contains_state(person_id):
                 qf.add(Node(person_id, node, neighbor[0]))
-
 
 
 def person_id_for_name(name):
